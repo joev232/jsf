@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>JSF</display-name>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
+    <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+    <param-value>client</param-value>
+  </context-param>
+    <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.xhtml</welcome-file>
+  </welcome-file-list>
+  
+  <!-- ejemplo anterior -->
+      <servlet>
+        <description>Usuarios Activos</description>
+        <display-name>ListaDepartamento</display-name>
+        <servlet-name>ListaDepartamento</servlet-name>
+        <servlet-class>com.ejemplo.servlet.ListaDepartamento</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListaDepartamento</servlet-name>
+        <url-pattern>/ListaDepartamento</url-pattern>
+     </servlet-mapping>
+
+   	 
+	   	 <servlet>
+   	     <description>Servlet Listado por Departtamentos</description>
+   	     <display-name>EmpleadosPorDepartamento</display-name>
+   	     <servlet-name>EmpleadosPorDepartamento</servlet-name>
+   	     <servlet-class>com.ejemplo.servlet.EmpleadosPorDepartamento</servlet-class>
+   	 </servlet>
+   	 <servlet-mapping>
+   	     <servlet-name>EmpleadosPorDepartamento</servlet-name>
+   	     <url-pattern>/EmpleadosPorDepartamento</url-pattern>
+   	 </servlet-mapping> 
+  
+  
+</web-app>
