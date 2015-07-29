@@ -33,7 +33,7 @@ public class DepartmentsDAO extends SuperClaseDAO implements InterfaceDAO{
 				
 		SessionManager sesession;
 		
-		List<Departments> listar =  getSession().createSQLQuery("SELECT DEPARTMENT_ID FROM DEPARTMENTS").addEntity(Departments.class).list();
+		List<Departments> listar =  getSession().createSQLQuery("SELECT * FROM DEPARTMENTS").addEntity(Departments.class).list();
 		return listar;
 	}
 
