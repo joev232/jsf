@@ -10,17 +10,15 @@
     </h:head>
     
     <h:form>
-    <h:selectOneMenu label="ListaDepartamentoJSF"  >
+    <h:selectOneMenu label="ListaDepartamentoJSF"  value="#{listaDepartamentoJSF.selected}" >
     	<f:selectItems value="#{listaDepartamentoJSF.lista}" var="d" itemValue="#{d.departmentId}" itemLabel="#{d.departmentName}" />
        
     </h:selectOneMenu> 
     	
+     <h:commandButton value="Mostar" action="#{listaDepartamentoJSF.mostrarEmpleados}"></h:commandButton>
+    	
    </h:form> 
-    
-     
-    
-    
-    
+       
 <!--     <h:body> -->
 <!--     	<h3>Bienvenido</h3> -->
 <!--     	<h:form> -->

@@ -13,14 +13,20 @@ public class NumBean {
 		return num;
 	}
 
+	public NumBean() {
+		//super();
+		//this.num = num;
+	}
+
 	public void setNum(int num) {
 		this.num = num;
 	}
 	
-	public void  mostar(){
+	public void  mostrar(){
 		
+		num=+num;
 		System.out.println(this.num);
-		//return vista2;
+		//return "wellcome";
 		
 	}
 
