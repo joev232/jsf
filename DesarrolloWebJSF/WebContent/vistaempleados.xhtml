@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+ 
+    <h:head>
+        <title>Java Server Faces 2.2</title>
+    </h:head>
+    
+    <h:body>
+    
+    	<h:outputText rendered="#{empty listaDepartamentoJSF.lista2}" value="no hay empleados"/>
+		<h:dataTable value="#{listaDepartamentoJSF.lista2}" var="e">
+		
+<!-- 		<h:form rendered="#{not empty listaDepartamentoJSF.lista2}"/> -->
+
+		
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				#{e.firstName}
+			</h:column>
+				
+			<h:column>
+				<f:facet name="header">Email</f:facet>
+				#{e.email}
+			</h:column>
+			
+		
+		</h:dataTable>
+
+    </h:body> 
+       
+<!--     <h:body> -->
+<!--     	<h3>Bienvenido</h3> -->
+<!--     	<h:form> -->
+<!--     	   <h:inputText value="#{holaMundo.nombre}"></h:inputText> -->
+<!--     	   <h:commandButton value="Welcome Me" action="wellcome"></h:commandButton> -->
+<!--     	</h:form> -->
+<!--     </h:body> -->
+</html>
