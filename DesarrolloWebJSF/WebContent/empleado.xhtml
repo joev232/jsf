@@ -12,8 +12,12 @@
     <h:body>
     	<h3>Ingrese su ID Empleado</h3>
     	<h:form>
-    	   <h:inputText value="#{empleadoJSF.id}"></h:inputText>
+    	   <h:inputText id="idempleado"
+    	    value="#{empleadoJSF.id}" validatorMessage="El id de empleado debe estar entre 100 y 206">
+    	    <f:validateLongRange minimum="100" maximum="207"/>
+    	   </h:inputText>
     	   <h:commandButton value="Mostar" action="#{empleadoJSF.buscar}"></h:commandButton>
+    	   <h:message id="id" for="idempleado" style="color:red"/>
     	</h:form>
     </h:body> 
        
